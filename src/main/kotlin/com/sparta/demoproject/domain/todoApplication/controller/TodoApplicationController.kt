@@ -6,23 +6,23 @@ import com.sparta.demoproject.domain.todoApplication.dto.UpdateApplicationDescri
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
-@RequestMapping("/courses/{courseId}/applications")
+@RequestMapping("/todo/{todoId}/applications")
 @RestController
 class CourseApplicationController {
 
     @PostMapping
-    fun applyCourse(@PathVariable courseId: Long, newTodoRequest: NewTodoRequest): ResponseEntity<NewTodoApplicationResponse> {
+    fun applyCourse(@PathVariable todoId: Long, newTodoRequest: NewTodoRequest): ResponseEntity<NewTodoApplicationResponse> {
         TODO("Not yet implemented")
     }
 
     @GetMapping()
-    fun getApplicationList(@PathVariable courseId: Long): ResponseEntity<List<NewTodoApplicationResponse>> {
+    fun getApplicationList(@PathVariable todoId: Long): ResponseEntity<List<NewTodoApplicationResponse>> {
         TODO("Not yet implemented")
     }
 
     @GetMapping("/{applicationId}")
     fun getApplication(
-        @PathVariable courseId: Long,
+        @PathVariable todoId: Long,
         @PathVariable applicationId: Long
     ): ResponseEntity<NewTodoApplicationResponse> {
         TODO("Not yet implemented")
@@ -30,7 +30,7 @@ class CourseApplicationController {
 
     @PatchMapping("/{applicationId}")
     fun updateApplicationStatus(
-        @PathVariable courseId: Long,
+        @PathVariable todoId: Long,
         @PathVariable applicationId: Long,
         @RequestBody updateApplicationDescriptionRequest: UpdateApplicationDescriptionRequest
     ): ResponseEntity<NewTodoApplicationResponse> {
